@@ -143,3 +143,48 @@ print(json.dumps(x, indent=4))
 #You can also define the separators, default value is (", ", ": "), 
 # which means using a comma and a space to separate each object, 
 # and a colon and a space to separate keys from values:
+# Use the separators parameter to change the default separator:
+'''
+import json
+
+x = {
+  "name": "John",
+  "age": 30,
+  "married": True,
+  "divorced": False,
+  "children": ("Ann","Billy"),
+  "pets": None,
+  "cars": [
+    {"model": "BMW 230", "mpg": 27.5},
+    {"model": "Ford Edge", "mpg": 24.1}
+  ]
+}
+
+# use . and a space to separate objects, and a space, a = and a space to separate keys from their values:
+print(json.dumps(x, indent=4, separators=(". ", " = ")))
+'''
+
+
+                                                    ## Order the Result
+
+# The json.dumps() method has parameters to order the keys in the result:
+# Use the sort_keys parameter to specify if the result should be sorted or not:
+'''
+import json
+
+x = {
+  "name": "John",
+  "age": 30,
+  "married": True,
+  "divorced": False,
+  "children": ("Ann","Billy"),
+  "pets": None,
+  "cars": [
+    {"model": "BMW 230", "mpg": 27.5},
+    {"model": "Ford Edge", "mpg": 24.1}
+  ]
+}
+
+# sort the result alphabetically by keys:
+print(json.dumps(x, indent=4, sort_keys=True))
+'''
