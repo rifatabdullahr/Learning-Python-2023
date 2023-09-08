@@ -199,3 +199,27 @@ else :
 '''
 
 '''
+
+
+                                                    ##Special Sequences
+
+# A special sequence is a \ followed by one of the characters in the list below, and has a special meaning:
+
+## \A	Returns a match if the specified characters are at the beginning of the string	 "\AThe"
+'''
+import re 
+
+txt = "Rahim loves his country"
+
+#Check if the string starts with "The":
+
+x = re.findall("\ARahim", txt)
+
+print (x)
+
+if x :
+    print("Yes,The sentence starts with Rahim")
+
+else :
+    print("No it isn't")
+    '''
