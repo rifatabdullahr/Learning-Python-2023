@@ -120,3 +120,82 @@ if x :
 else :
     print("No Match")
 '''
+
+
+## *	Zero or more occurrences	"he.*o"
+'''
+import re
+
+txt  = "Hello, I am Rifat"
+
+#Search for a sequence that starts with "he", followed by 0 or more  (any) characters, and an "o":
+x = re.findall("He.*o", txt)
+
+print(x)
+'''
+
+
+## +	One or more occurrences	"he.+o"
+'''
+import re
+
+txt ="I am Rifat"
+#Search for a sequence that starts with "Ri", followed by 1 or more  (any) characters, and an "t":
+
+x = re.findall("Ri.+t", txt)
+
+print(x)
+'''
+
+
+## ?	Zero or one occurrences	"he.?o"
+'''
+import re
+
+txt = "I am Rifat"
+
+#Search for a sequence that starts with "Ri", followed by 0 or 1  (any) character, and an "t":
+
+x = re.findall("Ri.?t", txt)
+
+print(x)
+
+#This time we got no match, because there were not zero, not one, but two characters between "Ri" and the "t"
+'''
+
+
+## {}	Exactly the specified number of occurrences	"he.{2}o"
+'''
+import re
+
+txt = txt = "He is Rifat"
+
+#Search for a sequence that starts with "Ri", followed excactly 2 (any) characters, and an "t":
+
+x = re.findall("Ri.{2}t", txt)
+
+print(x)
+'''
+
+
+##  |	Either or	"falls|stays"
+'''
+import re
+
+txt = "I am Rifat and he is Hasib"
+
+#Check if the string contains either "am" or "are":
+
+x = re.findall("am|are", txt)
+print(x)
+if x :
+    print("Yes,At least we found one match")
+else :
+    print("No match")
+'''
+
+
+## ()	Capture and group
+'''
+
+'''
