@@ -222,4 +222,45 @@ if x :
 
 else :
     print("No it isn't")
+
     '''
+
+
+## \b	Returns a match where the specified characters are at the beginning or at the end of a word    r"\bain"
+'''
+import re
+
+txt = "The rain in Spain"
+
+#Check if "ain" is present at the beginning of a WORD:
+
+x = re.findall(r"\bain", txt)
+
+print(x)
+if x :
+    print("Yes,This matched")
+
+else :
+    print("No it doesn't match")
+
+#
+#
+#
+    
+# (the "r" in the beginning is making sure that the string is being treated as a "raw string")     r"ain\b"
+
+import re
+
+txt = "The rain in Spain"
+
+#Check if "ain" is present at the end of a WORD:
+
+x = re.findall(r"ain\b", txt)
+
+print(x)
+
+if x:
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+  '''
