@@ -103,3 +103,20 @@ if x :
 else :
     print("no matched")
 '''
+
+
+## $	Ends with	"planet$"
+'''
+import re
+
+txt = "Hi everyone.Welcome to Planet"
+
+x = re.findall("Planet$", txt)
+
+#Check if the string ends with 'planet':
+
+if x :
+    print("Yes,ends with Planet")
+else :
+    print("No Match")
+'''
