@@ -264,3 +264,81 @@ if x:
 else:
   print("No match")
   '''
+
+
+## \B	Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word    r"\Bain"
+'''
+import re
+
+txt = "The rain in Spain"
+
+#Check if "ain" is present, but NOT at the beginning of a word:
+
+x = re.findall(r"\Bain", txt)
+
+print(x)
+
+if x:
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+ '''
+
+
+## \B (the "r" in the beginning is making sure that the string is being treated as a "raw string")    r"ain\B"
+'''
+import re
+
+txt = "The rain in Spain"
+
+#Check if "ain" is present, but NOT at the end of a word:
+x = re.findall(r"ain\B", txt)
+print(x)
+
+if x :
+ print("Yes, Matched")
+else:
+ print("no match")
+
+ '''
+
+
+## \d	Returns a match where the string contains digits (numbers from 0-9)	"\d"
+'''
+import re
+
+txt = "There are 4 cars"
+
+#Check if the string contains any digits (numbers from 0-9):
+
+x = re.findall("\d", txt)
+
+print(x)
+
+if x :
+    print("Yes,we found a digit")
+else:
+    print("No match")
+    '''
+
+
+## \D	Returns a match where the string DOES NOT contain digits	"\D"
+'''
+import re
+
+txt = "There are 4 cars"
+
+#Check if the string contains any digits (numbers from 0-9):
+
+x = re.findall("\D", txt)
+
+print(x)
+
+if x :
+    print("Yes,we found a digit")
+else:
+    print("No match")
+    '''
+
+
+## 
