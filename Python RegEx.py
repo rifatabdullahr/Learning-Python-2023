@@ -328,7 +328,7 @@ import re
 
 txt = "There are 4 cars"
 
-#Check if the string contains any digits (numbers from 0-9):
+#Return a match at every no-digit character:
 
 x = re.findall("\D", txt)
 
