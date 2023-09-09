@@ -341,4 +341,119 @@ else:
     '''
 
 
-## 
+## \s	Returns a match where the string contains a white space character	"\s"
+'''
+import re
+
+txt = "The rain in Spain"
+
+#Return a match at every white-space character:
+
+x = re.findall("\s", txt)
+
+print(x)
+
+if x:
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+
+  '''
+
+
+## \S	Returns a match where the string DOES NOT contain a white space character	"\S"
+'''
+import re
+
+txt = "The rain in Spain"
+
+#Return a match at every NON white-space character:
+
+x = re.findall("\S", txt)
+
+print(x)
+
+if x:
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+'''
+
+
+## \w	Returns a match where the string contains any word characters (characters from a to Z, 
+# digits from 0-9, and the underscore _ character)	"\w"
+'''
+import re
+
+txt = "I am Hasib.I read in class 3.Last month my attendence was 100%"
+
+#Return a match at every word character (characters from a to Z, digits from 0-9, and the underscore _ character):
+
+x = re.findall("\w", txt)
+
+print(x)
+
+if x:
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+  '''
+
+
+## \W	Returns a match where the string DOES NOT contain any word characters	"\W"
+'''
+import re
+
+txt = "I am Hasib.I read in class 3.Last month my attendence was 100%"
+
+#Return a match at every NON word character (characters NOT between a and Z. Like "!", "?" white-space etc.):
+
+x = re.findall("\W", txt)
+
+print(x)
+
+if x:
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+'''
+
+
+## \Z	Returns a match if the specified characters are at the end of the string	"Bangladesh\Z"
+'''
+import re
+
+txt = "The rain in Bangladesh"
+
+#Check if the string ends with "Bangladesh":
+
+x = re.findall("Bangladesh\Z", txt)
+
+print(x)
+
+if x:
+  print("Yes, there is a match!")
+else:
+  print("No match")
+'''
+
+
+                                                        ##Sets
+
+#A set is a set of characters inside a pair of square brackets [] with a special meaning:
+
+## [arn]	Returns a match where one of the specified characters (a, r, or n) is present
+'''
+import re
+
+txt = "Rain in BD"
+#Check if the string has any a, r, or n characters:
+
+x = re.findall("[arn]", txt)
+print(x)
+
+if x:
+    print("Yes, We found at least one match")
+else :
+    print("No match")
+'''
