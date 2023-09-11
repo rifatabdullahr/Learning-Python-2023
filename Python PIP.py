@@ -62,3 +62,23 @@ txt = "hello world"
 
 print(c.hump(txt))
 '''
+                                                            ##Find Packages
+
+# Find more packages at https://pypi.org/.
+
+                                                            #Remove a Package
+
+#Use the uninstall command to remove a package:
+#Uninstall the package named "camelcase":
+'''
+C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>pip uninstall camelcase
+'''
+
+                                                            #List Packages
+
+#Use the list command to list all the packages installed on your system:
+
+#List installed packages:
+'''
+C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>pip list
+'''
