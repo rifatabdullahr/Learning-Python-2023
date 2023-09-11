@@ -41,3 +41,18 @@ except NameError:
 except:
     print("Something else gone error")
     '''
+
+
+## Else
+#You can use the else keyword to define a block of code to be executed if no errors were raised:
+'''
+try:
+    print("Hi man")
+except:
+    print("There is an Error")
+else:
+    print("No error")
+    '''
+
+
+#
