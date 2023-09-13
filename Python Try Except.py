@@ -68,3 +68,46 @@ except:
 finally:
     print("The 'try and except' has finished")
     '''
+
+
+##Try to open and write to a file that is not writable:
+'''
+
+try:
+  f = open("Rough.py")
+  try:
+      f.write("Rifat Abdullah")
+  except:
+      print("Something went wrong when writing to the file")
+  finally:
+      f.close()
+except:
+  print("Something went wrong opening  the file")
+  '''
+
+#The program can continue, without leaving the file object open.
+
+                                                        ##Raise an exception
+
+#As a Python developer you can choose to throw an exception if a condition occurs.
+
+#To throw (or raise) an exception, use the raise keyword.
+#
+#Raise an error and stop the program if x is lower than 0:
+'''
+x = -1
+
+if x < 0:
+  raise Exception("Sorry, no numbers below zero")
+'''
+
+#The raise keyword is used to raise an exception.
+
+#You can define what kind of error to raise, and the text to print to the user.
+#Raise a TypeError if x is not an integer:
+'''
+x = "hello"
+
+if not type(x) is int:
+    raise Exception("Only int numbers are allowed")
+    '''
